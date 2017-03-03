@@ -21,7 +21,6 @@ app.post("/menu", function(req, res) {
     else if (req.body.mode == "ranking") {
         fs.readFile(__dirname + "/public/data/ranking.json", "utf-8", function(err, data) {
             var json = JSON.parse(data)
-            console.log(json)
             res.render("ranking.pug", { data: json })
         })
     } else
@@ -29,7 +28,10 @@ app.post("/menu", function(req, res) {
 })
 
 app.post("/play", function(req, res) {
-
+    fs.readFile(__dirname + "/public/data/" + req.body.level + ".json", "utf-8", function(err, data) {
+        var json = JSON.parse(data)
+        res.render("game.pug", { data: json })
+    })
 })
 
 app.listen(3000, function() {

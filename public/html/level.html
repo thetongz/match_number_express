@@ -10,10 +10,10 @@
 <body>
     <div id="main">
         <h1> Choose your level </h1>
-        <form action="/game" method="POST">
-            <button class="level" id="easy"> 4X4 Field </button><br>
-            <button class="level" id="medium"> 5X5 Field </button><br>
-            <button class="level" id="hard"> 6X6 Field </button><br>
+        <form action="/play" method="POST">
+            <button class="level" name="level" value="easy"> Easy (4X4 boards) </button><br>
+            <button class="level" name="level" value="medium"> Medium (5X5 boards) </button><br>
+            <button class="level" name="level" value="hard"> Hard (6X6 boards) </button><br>
         </form>
     </div>
 </body>
