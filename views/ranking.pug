@@ -1,0 +1,80 @@
+<!DOCTYPE>
+
+html
+    head
+        title This is title
+        link(href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        link(rel="stylesheet" href="/public/css/style.css")
+        style.
+            body {
+                font-family: 'Lato', sans-serif;
+                text-align: left;
+                padding-left: 50px
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th{
+                background-color: #303F9F;
+                color: white;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2
+            }
+
+            a{
+                text-decoration : none;
+                color : black;
+                font-size: 24px;
+            }
+        script.
+
+    body
+
+        div#easy
+            h1 easy
+            table(style="width:50%")
+                tr
+                    each val,key in data.easy
+                        th #{key}
+                    -for (var i = 0; i < data.easy.name.length ; i++)
+                        tr
+                            td #{data.easy.name[i]}
+                            td #{data.easy.time[i]}
+                            
+        div#medium
+            h1 medium
+            table(style="width:50%")
+                tr
+                    each val,key in data.medium
+                        th #{key}
+                    -for (var i = 0; i < data.medium.name.length ; i++)
+                        tr
+                            td #{data.medium.name[i]}
+                            td #{data.medium.time[i]}
+        
+        div#hard
+            h1 hard
+            table(style="width:50%")
+                tr
+                    each val,key in data.hard
+                        th #{key}
+                    -for (var i = 0; i < data.hard.name.length ; i++)
+                        tr
+                            td #{data.hard.name[i]}
+                            td #{data.hard.time[i]} 
+        br
+        a(href="/") Back to Home
+    script.
+        var 

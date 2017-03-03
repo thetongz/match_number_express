@@ -1,0 +1,14 @@
+{
+    "easy": {
+        "name": ["John", "eee"],
+        "time": [0.02, 0.03]
+    },
+    "medium": {
+        "name": [],
+        "time": []
+    },
+    "hard": {
+        "name": [],
+        "time": []
+    }
+}
