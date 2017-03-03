@@ -46,34 +46,34 @@ html
             h1 easy
             table(style="width:50%")
                 tr
-                    each val,key in data.easy
-                        th #{key}
-                    -for (var i = 0; i < data.easy.name.length ; i++)
+                    th name
+                    th time
+                    -for (var i = 0; i < data.easy.length ; i++)
                         tr
-                            td #{data.easy.name[i]}
-                            td #{data.easy.time[i]}
+                            td #{data.easy[i].name}
+                            td #{data.easy[i].time}
                             
         div#medium
             h1 medium
             table(style="width:50%")
                 tr
-                    each val,key in data.medium
-                        th #{key}
-                    -for (var i = 0; i < data.medium.name.length ; i++)
+                    th name
+                    th time
+                    -for (var i = 0; i < data.medium.length ; i++)
                         tr
-                            td #{data.medium.name[i]}
-                            td #{data.medium.time[i]}
+                            td #{data.medium[i].name}
+                            td #{data.medium[i].time}
         
         div#hard
             h1 hard
             table(style="width:50%")
                 tr
-                    each val,key in data.hard
-                        th #{key}
-                    -for (var i = 0; i < data.hard.name.length ; i++)
+                    th name
+                    th time
+                    -for (var i = 0; i < data.hard.length ; i++)
                         tr
-                            td #{data.hard.name[i]}
-                            td #{data.hard.time[i]} 
+                            td #{data.hard[i].name}
+                            td #{data.hard[i].time}
         br
         a(href="/") Back to Home
     script.
