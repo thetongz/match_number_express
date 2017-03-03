@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/html/index.html")
 })
 
-app.get("/", function(req, res) {
+app.post("/", function(req, res) {
     var name = req.body.name
     var time = req.body.timeuse
     fs.readFile(__dirname + "/public/data/ranking.json", "utf-8", function(err, data) {
