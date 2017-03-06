@@ -55,13 +55,6 @@ app.post("/menu", function(req, res) {
         res.sendFile(__dirname + "/public/html/howto.html")
 })
 
-app.post("/play", function(req, res) {
-    fs.readFile(__dirname + "/public/data/" + req.body.level + ".json", "utf-8", function(err, data) {
-        var json = JSON.parse(data)
-        res.render("game.pug", { data: json })
-    })
-})
-
 app.listen(3000, function() {
     console.log("Running at PORT 3000")
 })
