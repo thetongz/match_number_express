@@ -1,1 +1,9 @@
-{ "easy": [{ "name": "John", "time": 0.05 }, { "name": "test", "time": "40" }, { "name": "test", "time": "45" }], "medium": [{ "name": "John", "time": 0.05 }], "hard": [{ "name": "John", "time": 0.05 }] }
+{
+    "easy": [{ "name": "John", "time": "0:05 min" },
+        { "name": "test", "time": "0:40 min" },
+        { "name": "test", "time": "0:45 min" },
+        { "name": "qwe", "time": "0:41 min" }
+    ],
+    "medium": [{ "name": "John", "time": "0:41 min" }],
+    "hard": [{ "name": "John", "time": "0:41 min" }]
+}
