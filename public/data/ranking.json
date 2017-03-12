@@ -1,5 +1,6 @@
 {
-    "easy": [{ "name": "John", "time": "0:05 min" },
+    "easy": [
+        { "name": "John", "time": "0:05 min" },
         { "name": "test", "time": "0:40 min" },
         { "name": "test", "time": "0:45 min" },
         { "name": "qwe", "time": "0:41 min" }

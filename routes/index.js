@@ -9,7 +9,7 @@ route.get("/", function(req, res) {
 
 route.post("/", function(req, res) {
     var name = req.body.name
-    var time = (req.body.timeuse % 60) + ":" + Math.floor(req.body.timeuse / 60) + " min"
+    var time = Math.floor(req.body.timeuse / 60) + ":" + req.body.timeuse % 60 + " min"
     fs.readFile(path.resolve(__dirname + "/../public/data/ranking.json"), "utf-8", function(err, data) {
         var json = JSON.parse(data)
         if (req.body.level == "easy") {
