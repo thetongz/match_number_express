@@ -13,6 +13,7 @@
         level
     $(document).ready(function() {
         $("#game").hide(),
+            $('#entername').hide(),
             $("button").click(function() {
                 $("#main").hide()
                 $("#game").show()
@@ -57,6 +58,7 @@
 
     function startGame() {
         $.getJSON("/data/" + level + ".json", function(result) {
+
             var json = result
             var i = Math.floor(Math.random() * json["numberGame"])
             game = json["game"][i]
@@ -133,6 +135,8 @@
         document.getElementById("time").innerHTML = win == true ? "You win" : "You lose"
         document.getElementById("number").innerHTML = win == false ? "<a href='/'> Go to homepage </a>" : ""
         if (win) {
+            $('#entername').show()
+            document.getElementById("entername").removeAttribute("display")
             document.getElementById("name").type = "text"
             document.getElementById("aws").removeAttribute("hidden")
             document.getElementById("timeuse").value = time_remain
@@ -165,6 +169,7 @@
     </div>
     <h2 id="caution"></h2>
     <form action="/" method="POST">
+        <p id="entername"> Please enter your name in textbox below </p>
         <input type="hidden" name="level" id="level">
         <input type="hidden" name="name" id="name" placeholder="name">
         <input type="hidden" name="timeuse" id="timeuse">
