@@ -56,7 +56,7 @@
     })
 
     function startGame() {
-        $.getJSON("/public/data/" + level + ".json", function(result) {
+        $.getJSON("/data/" + level + ".json", function(result) {
             var json = result
             var i = Math.floor(Math.random() * json["numberGame"])
             game = json["game"][i]
