@@ -1,9 +1,10 @@
 {
     "easy": [
         { "name": "John", "time": "0:05 min" },
+        { "name": "TonG", "time": "0:18 min" },
         { "name": "test", "time": "0:40 min" },
-        { "name": "test", "time": "0:45 min" },
-        { "name": "qwe", "time": "0:41 min" }
+        { "name": "qwe", "time": "0:41 min" },
+        { "name": "test", "time": "0:45 min" }
     ],
     "medium": [{ "name": "John", "time": "0:41 min" }],
     "hard": [{ "name": "John", "time": "0:41 min" }]

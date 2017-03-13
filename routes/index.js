@@ -28,6 +28,9 @@ route.post("/", function(req, res) {
                 time: time
             })
         }
+        json.easy.sort(compare)
+        json.medium.sort(compare)
+        json.hard.sort(compare)
         var nj = JSON.stringify(json)
         fs.writeFile(path.resolve(__dirname + "/../public/data/ranking.json"), nj, 'utf8', function(err, data) {
             res.sendFile(path.resolve(__dirname + "/../public/html/index.html"))
@@ -52,3 +55,9 @@ route.all('*', function(req, res) {
 })
 
 module.exports = route
+
+function compare(a, b) {
+    var timea = (a.time.charAt(0) * 60) + (a.time.charAt(2) * 10) + (a.time.charAt(3) * 1)
+    var timeb = (b.time.charAt(0) * 60) + (b.time.charAt(2) * 10) + (b.time.charAt(3) * 1)
+    return timea - timeb
+}

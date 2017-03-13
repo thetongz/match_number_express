@@ -47,10 +47,10 @@ html
                 tr
                     th name
                     th time
-                    -for (var i = 0; i < data.easy.length ; i++)
+                    each i in data.easy 
                         tr
-                            td #{data.easy[i].name}
-                            td #{data.easy[i].time}
+                            td #{i.name}
+                            td #{i.time}
                             
         div#medium
             h1 medium
@@ -58,10 +58,10 @@ html
                 tr
                     th name
                     th time
-                    -for (var i = 0; i < data.medium.length ; i++)
+                    each i in data.medium 
                         tr
-                            td #{data.medium[i].name}
-                            td #{data.medium[i].time}
+                            td #{i.name}
+                            td #{i.time}
         
         div#hard
             h1 hard
@@ -69,10 +69,10 @@ html
                 tr
                     th name
                     th time
-                    -for (var i = 0; i < data.hard.length ; i++)
+                    each i in data.hard 
                         tr
-                            td #{data.hard[i].name}
-                            td #{data.hard[i].time}
+                            td #{i.name}
+                            td #{i.time}
         br
         a(href="/") Back to Home
     script.
